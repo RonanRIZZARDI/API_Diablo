@@ -10,7 +10,7 @@ public class DiabloAPIController {
 	private static final String template = "Wesh, %s!";
     private final AtomicLong counter = new AtomicLong();
 
-    @RequestMapping("/greeting")
+    @RequestMapping("/diabloapi")
     public DiabloAPI diabloapi(@RequestParam(value="name", defaultValue="poto") String name) {
         return new DiabloAPI(counter.incrementAndGet(),
                             String.format(template, name));
